@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cairo: 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-amiri: 'Amiri', serif;
+    --font-latin: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Cinzel', serif;
+  }
+
+  /* Explicit RTL support for Arabic */
+  [dir="rtl"],
+  html[dir="rtl"],
+  body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-cairo);
+  }
+
+  [dir="ltr"],
+  html[dir="ltr"],
+  body[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+    font-family: var(--font-latin);
+  }
+
+  [dir="rtl"] input,
+  [dir="rtl"] textarea,
+  [dir="rtl"] select {
+    text-align: right;
+    direction: rtl;
+  }
+
+  /* Telephone numbers & inputs must always read Left-to-Right in both Arabic and French */
+  [dir="rtl"] input[type="tel"],
+  input[type="tel"],
+  [dir="rtl"] [dir="ltr"],
+  .tel-number {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: isolate;
+  }
+
+  [dir="ltr"] input,
+  [dir="ltr"] textarea,
+  [dir="ltr"] select {
+    text-align: left;
+    direction: ltr;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Subtle Moroccan geometric zellige patterns */
+.moroccan-zellige-pattern {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#b45309 0.65px, transparent 0.65px), radial-gradient(#064e3b 0.65px, #FAF7F2 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  background-opacity: 0.15;
+}
+
+.moroccan-border-frieze {
+  background-image: repeating-linear-gradient(45deg, #b45309 0, #b45309 6px, transparent 6px, transparent 12px, #047857 12px, #047857 18px, transparent 18px, transparent 24px);
+  height: 4px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5efe6;
+}
+::-webkit-scrollbar-thumb {
+  background: #c2410c;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9a3412;
+}

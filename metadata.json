@@ -1,0 +1,6 @@
+{
+  "name": "Commune Taroudant - البوابة الرقمية لجماعة تارودانت",
+  "description": "تحديث وتطوير البوابة الرسمية لجماعة تارودانت بتصميم متجاوب للهواتف مستوحى من التراث المغربي وأسوار المدينة، مع خدمات إلكترونية للمواطنين ومسطرة الشكايات والتعمير.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
