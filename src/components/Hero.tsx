@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Language } from '../types/portal';
+import heroImage from '../assets/images/taroudant_historic_ramparts_1793483779305.jpg';
 import { MoroccanStar } from './MoroccanMotifs';
 import { Search, FileText, AlertCircle, Clock, MapPin, Building, ArrowUpRight } from 'lucide-react';
 
@@ -39,10 +40,10 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Hero Background Image with measured scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/taroudant_historic_ramparts_1793483779305.jpg"
-          alt="أسوار تارودانت التاريخية العريقة بالمغرب"
-          className="w-full h-full object-cover object-center transform scale-102 filter brightness-85"
-          referrerPolicy="no-referrer"
+  src={heroImage}
+  alt="أسوار تارودانت التاريخية العريقة بالمغرب"
+  className="w-full h-full object-cover object-center transform scale-102 filter brightness-85"
+  referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/60 to-stone-900/40" />
         <div className="absolute inset-0 bg-gradient-to-r from-amber-950/40 via-transparent to-stone-950/60" />
